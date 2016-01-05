@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
 
-  get "/"   , to: "photos#index"
+  get  "/users/sign-up"          , to: "users#sign-up", as: :sign_up
+  post "/users/"                 , to: "users#create"
+  get  "/users/:user_id/account" , to: "users#show"   , as: :show_user
+
+  # sign-in and sign-out routes, connected to sessions controller, to go here
+
+  get "/"                        , to: "photos#index"
+  get "/photos/rate"             , to: "photos#rate"  , as: :rate_photo
+  get "/photos/:photo_id"        , to: "photos#show"  , as: :show_photo
+
+  # ratings routes to go here
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
