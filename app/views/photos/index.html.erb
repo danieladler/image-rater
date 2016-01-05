@@ -1,11 +1,15 @@
-<h1>INDEX</h1>
+<div class="row page-title">
+  <h1 class="col-sm-12">INDEX</h1>
+</div>
 
-<ul id="all-photo-list">
-  <% @photos.each do |p| %>
-    <li class="single-image">
-      <p> image URL placeholder   </p>
-      <p> <strong><%= link_to p.title, photo_path(p.id) %></strong></p>
-      <p> description placeholder </p>
-    </li>
-  <% end %>
-</ul>
+<div class="row all-photos">
+  <ul id="all-photo-list">
+    <% @photos.each do |p| %>
+      <li class="single-image">
+        <p> image URL placeholder   </p>
+        <p> <strong><%= link_to p.title, photo_path(p.id) %></strong></p>
+        <p> description placeholder </p>
+      </li>
+    <% end %>
+  </ul>
+</div>
