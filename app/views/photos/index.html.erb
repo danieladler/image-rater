@@ -4,7 +4,7 @@
   <% @photos.each do |p| %>
     <li class="single-image">
       <p> image URL placeholder   </p>
-      <p> <strong><%= link_to p.title, show_photo_path(p.id) %></strong></p>
+      <p> <strong><%= link_to p.title, photo_path(p.id) %></strong></p>
       <p> description placeholder </p>
     </li>
   <% end %>

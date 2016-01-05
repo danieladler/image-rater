@@ -1,9 +1,25 @@
 <h1>DETAIL: <%= @photo.title %></h1>
 
+<%= @photo.image_file.preview %>
+
 <div id="photo-container">
-  <p> image URL placeholder                </p>
-  <p> <strong><%= @photo.title %></strong> </p>
-  <p> description placeholder              </p>
+  <%= form_for @photo do |f| %>
+    <div class="field">
+      <%= f.label      :title %><br>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label      :description %><br>
+      <%= f.text_field :description %>
+    </div>
+    <div class="field">
+      <%= f.label      :image_file %><br>
+      <%= f.file_field :image_file %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
   ------
   <p> Photo by: <%= @photo.user.username %> </p>
   <p> Gravatar image placeholder            </p>

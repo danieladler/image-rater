@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   get "/"                        , to: "photos#index"
   get "/photos/rate"             , to: "photos#rate"  , as: :rate_photo
-  get "/photos/:photo_id"        , to: "photos#show"  , as: :show_photo
+  get   "/photos/:photo_id"      , to: "photos#show"  , as: :photo
+  patch "/photos/:photo_id"      , to: "photos#update", as: :update_photo
 
   # ratings routes to go here
 
