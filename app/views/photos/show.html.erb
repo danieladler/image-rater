@@ -34,3 +34,14 @@
   <p> Ratings summary placeholder           </p>
   <p> comments placeholder                  </p>
 </div>
+
+<div class="row">
+  <div class="col-sm-3 delete-photo">
+    <h3>Delete photo: </h3>
+    <form action="/photos/<%=@photo.id%>" method="POST">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" class="btn btn-md btn-danger" value="Delete" data-confirm:"Are you sure?">
+    </form>
+  </div>
+</div>

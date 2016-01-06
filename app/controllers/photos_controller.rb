@@ -35,6 +35,12 @@ class PhotosController < ApplicationController
     end
   end
 
+  def delete
+    @photo = Photo.find(params[:photo_id])
+    @photo.destroy
+    redirect_to root_path
+  end
+
   def rate
     @photo = Photo.random
   end

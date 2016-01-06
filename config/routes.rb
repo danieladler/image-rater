@@ -7,12 +7,13 @@ Rails.application.routes.draw do
 
   # sign-in and sign-out routes, connected to sessions controller, to go here
 
-  get   "/"                      , to: "photos#index"
-  get   "/photos/rate"           , to: "photos#rate"  , as: :rate_photo
-  get   "/photos/new"            , to: "photos#new"   , as: :new_photo
-  get   "/photos/:photo_id"      , to: "photos#show"  , as: :photo
-  post  "/photos"                , to: "photos#add"   , as: :add_photo
-  patch "/photos/:photo_id"      , to: "photos#update", as: :update_photo
+  get    "/"                     , to: "photos#index"
+  get    "/photos/rate"          , to: "photos#rate"  , as: :rate_photo
+  get    "/photos/new"           , to: "photos#new"   , as: :new_photo
+  get    "/photos/:photo_id"     , to: "photos#show"  , as: :photo
+  post   "/photos"               , to: "photos#add"   , as: :add_photo
+  patch  "/photos/:photo_id"     , to: "photos#update", as: :update_photo
+  delete "/photos/:photo_id"     , to: "photos#delete", as: :delete_photo
 
   # ratings routes to go here
 
