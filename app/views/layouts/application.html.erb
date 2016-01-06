@@ -8,13 +8,7 @@
 </head>
 <body>
 
-  <span>BEGIN HEADER PLACEHOLDER</span>
-  <ul id="header-placeholder">
-    <li><%= link_to "Random"        , rate_photo_path %>            </li>
-    <li><%= link_to "Create Account", sign_up_path %>               </li>
-    <li><%= link_to "My Account"    , show_user_path(:user_id)%>    </li>
-  </ul>
-  <span>END HEADER PLACEHOLDER</span>
+<%= render "layouts/navbar" %>
 
 <div class="container page-content">
   <%= yield %>

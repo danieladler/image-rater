@@ -9,7 +9,16 @@ class PhotosController < ApplicationController
   end
 
   def update
-  
+    @photo             = Photo.find(params[:photo_id])
+    @photo.title       = params[:photo][:title]
+    @photo.description = params[:photo][:description]
+    @photo.image_file  = params[:photo][:image_file]
+    # raise
+    @photo.save
+    redirect_to photo_path(@photo.id)
+  end
+
+  def create
   end
 
   def rate

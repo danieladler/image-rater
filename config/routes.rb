@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "photos#index"
 
   get  "/users/sign-up"          , to: "users#sign-up", as: :sign_up
   post "/users/"                 , to: "users#create"
