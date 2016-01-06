@@ -6,10 +6,12 @@
   <ul id="all-photo-list">
     <% @photos.each do |p| %>
       <li class="single-image">
-        <p> image URL placeholder   </p>
+        <p> <%= image_tag p.image_file.thumb %>   </p>
         <p> <strong><%= link_to p.title, photo_path(p.id) %></strong></p>
         <p> description placeholder </p>
       </li>
     <% end %>
   </ul>
 </div>
+
+<%= link_to "Add new photo", new_photo_path %>

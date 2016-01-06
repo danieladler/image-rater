@@ -18,7 +18,21 @@ class PhotosController < ApplicationController
     redirect_to photo_path(@photo.id)
   end
 
-  def create
+  def new
+    @photo             = Photo.new
+    # raise
+  end
+
+  def add
+    @photo             = Photo.new
+    @photo.title       = params[:photo][:title]
+    @photo.description = params[:photo][:description]
+    if @photo.save
+      redirect_to photo_path(@photo.id)
+    else
+      @photos = Photo.all
+      render :photos
+    end
   end
 
   def rate

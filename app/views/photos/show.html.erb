@@ -1,6 +1,6 @@
 <h1>DETAIL: <%= @photo.title %></h1>
 
-<%= @photo.image_file.preview %>
+<%= image_tag @photo.image_file.preview %>
 
 <div id="photo-container">
   <%= form_for @photo do |f| %>
@@ -21,7 +21,14 @@
     </div>
   <% end %>
   ------
-  <p> Photo by: <%= @photo.user.username %> </p>
+  <p>
+    Photo by:
+    <% if @photo.user %>
+      <%= @photo.user.username %>
+    <% else %>
+      anonymous
+    <% end %>
+  </p>
   <p> Gravatar image placeholder            </p>
   ------
   <p> Ratings summary placeholder           </p>
