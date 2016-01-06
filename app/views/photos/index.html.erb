@@ -2,16 +2,23 @@
   <h1 class="col-sm-12">INDEX</h1>
 </div>
 
-<div class="row all-photos">
-  <ul id="all-photo-list">
-    <% @photos.each do |p| %>
-      <li class="single-image">
-        <p> <%= image_tag p.image_file.thumb %>   </p>
-        <p> <strong><%= link_to p.title, photo_path(p.id) %></strong></p>
-        <p> description placeholder </p>
-      </li>
+<div class="row">
+  <div class="all-products">
+    <% @photos.in_groups_of(2, false).each do |group| %>
+      <div class="row">
+        <% group.each do |p| %>
+          <div class="col-sm-12 index-photo-block">
+            <%= link_to image_tag(p.image_file.square), photo_path(p.id) %><br>
+            <strong><%= link_to p.title, photo_path(p.id) %></strong><br>
+            description placeholder
+          </div>
+          <br>
+        <% end %>
+      </div>
     <% end %>
-  </ul>
+  </div>
 </div>
 
-<%= link_to "Add new photo", new_photo_path %>
+<div class="row">
+  <button class="btn btn-lg btn-info"><%= link_to "Add new photo", new_photo_path %></button>
+</div>
