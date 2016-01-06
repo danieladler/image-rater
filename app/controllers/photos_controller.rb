@@ -13,7 +13,6 @@ class PhotosController < ApplicationController
     @photo.title       = params[:photo][:title]
     @photo.description = params[:photo][:description]
     @photo.image_file  = params[:photo][:image_file]
-    # raise
     @photo.save
     redirect_to photo_path(@photo.id)
   end
@@ -27,6 +26,7 @@ class PhotosController < ApplicationController
     @photo             = Photo.new
     @photo.title       = params[:photo][:title]
     @photo.description = params[:photo][:description]
+    @photo.image_file  = params[:photo][:image_file]
     if @photo.save
       redirect_to photo_path(@photo.id)
     else
