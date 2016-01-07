@@ -2,10 +2,11 @@ Rails.application.routes.draw do
   root to: "photos#index"
 
   get  "/users/sign-up"          , to: "users#sign-up", as: :sign_up
-  post "/users/"                 , to: "users#create"
+  post "/users"                  , to: "users#create"
   get  "/users/:user_id/account" , to: "users#show"   , as: :show_user
 
-  # sign-in and sign-out routes, connected to sessions controller, to go here
+  post "/sign-in"                , to: "sessions#sign_in" , as: :sign_in
+  get  "/sign-out"               , to: "sessions#sign_out", as: :sign_out
 
   get    "/"                     , to: "photos#index"
   get    "/photos/rate"          , to: "photos#rate"  , as: :rate_photo

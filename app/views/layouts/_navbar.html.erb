@@ -15,8 +15,20 @@
       <div class="navbar-right">
         <ul class="nav navbar-nav">
           <li><%= link_to "Random"        , rate_photo_path %>            </li>
+
+          <%= form_tag sign_in_path, class:"navbar-form" do %>
+            <div class="form-group">
+              <input type="username", name="username", placeholder="username", class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password", name="password", placeholder="password", class="form-control">
+            </div>
+            <input type="submit", value="Sign In", class="btn btn-md btn-primary">
+          <% end %>
           <li><%= link_to "Create Account", sign_up_path %>               </li>
+
           <li><%= link_to "My Account"    , show_user_path(:user_id)%>    </li>
+          <li><%= link_to "Sign Out"      , sign_out_path%>               </li>
         </ul>
       </div>
     </div>
