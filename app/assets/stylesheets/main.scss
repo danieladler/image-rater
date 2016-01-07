@@ -6,7 +6,7 @@ body {
 }
 
 .navbar-default {
-  background-color: rgb(149, 199, 160);
+  background-color: rgba(149, 175, 199, 0.7);
 }
 
 .navbar a:link, .navbar a:visited {
@@ -32,6 +32,15 @@ body {
   margin-bottom: 40px;
 }
 
+.index-photo-block img {
+  border-radius: 6px;
+}
+
+#index-username {
+  float: right;
+}
+
 .add-photo-container {
-  margin-top: 20px;
+  margin: 20px 0;
+  padding-bottom: 60px;
 }

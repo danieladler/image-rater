@@ -4,9 +4,11 @@
       <div class="row">
         <% group.each do |p| %>
           <div class="col-lg-6 index-photo-block">
-            <%= link_to image_tag(p.image_file.square), photo_path(p.id) %><br>
-            <strong><%= link_to p.title, photo_path(p.id) %></strong><br>
-            <%= p.description %>
+            <%= link_to image_tag(p.image_file.index), photo_path(p.id) %><br>
+            <div class="index-photo-details">
+              <strong><%= link_to p.title, photo_path(p.id) %></strong>
+              <span id="index-username">by <strong><%= p.user.username %></strong></span>
+            </div>
           </div>
         <% end %>
       </div>
@@ -16,7 +18,8 @@
 
 <div class="row">
   <div class="add-photo-container">
-  <button class="btn btn-lg btn-info col-lg-6 col-lg-push-3 col-sm-6 col-sm-push-3">
-    <%= link_to "Add new photo", new_photo_path %>
-  </button>
+    <button class="btn btn-lg btn-info col-lg-6 col-lg-push-3 col-sm-6 col-sm-push-3">
+      <%= link_to "Add new photo", new_photo_path %>
+    </button>
+  </div>
 </div>

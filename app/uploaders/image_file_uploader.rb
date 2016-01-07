@@ -23,4 +23,8 @@ class ImageFileUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [256, 256]
   end
 
+  version :index do
+    process :resize_to_fill => [555, 367, gravity = "center"]
+  end
+
 end
