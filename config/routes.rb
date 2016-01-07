@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
   root to: "photos#index"
 
-  get  "/sign-up"                , to: "users#sign-up", as: :sign_up
+  get  "/sign-up"                , to: "users#sign_up", as: :sign_up
   post "/users/:user_id"         , to: "users#update" , as: :update_user
   post "/users"                  , to: "users#create" , as: :new_user
   get  "/users/:user_id/account" , to: "users#show"   , as: :user
 
+  # put mailer routes here if they are to occur separately from
+  # existing actions (like creating a new user)
+
   post "/sign-in"                , to: "sessions#sign_in" , as: :sign_in
   get  "/sign-out"               , to: "sessions#sign_out", as: :sign_out
+
 
   get    "/"                     , to: "photos#index"
   get    "/photos/rate"          , to: "photos#rate"  , as: :rate_photo

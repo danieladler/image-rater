@@ -5,7 +5,7 @@
         <% group.each do |p| %>
           <div class="col-lg-6 index-photo-block">
             <%= link_to image_tag(p.image_file.index), photo_path(p.id) %><br>
-            <div class="index-photo-details">
+            <div class="col-log-6 index-photo-details">
               <strong><%= link_to p.title, photo_path(p.id) %></strong>
               <span id="index-username">by <strong><%= p.user.username %></strong></span>
             </div>
