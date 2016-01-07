@@ -18,4 +18,11 @@ class UsersController < ApplicationController
     @user = User.find(session[:user_id])
   end
 
+  def update
+    @user       = User.find(session[:user_id])
+    @user.email = params[:email]
+    @user.save
+    redirect_to user_path(:user_id)
+  end
+
 end
