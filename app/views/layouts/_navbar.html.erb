@@ -2,7 +2,10 @@
   <!-- flash notice logic goes here, or possibly in its own partial -->
   <div class="container">
     <div class="navbar-header">
-      <%= link_to "Home", root_path, class:"navbar-brand" %>
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Home", root_path, class:"navbar-brand" %></li>
+        <li><%= link_to "Random", rate_photo_path %></li>
+      </ul>
 
       <button class="navbar-toggle collapsed" data-toggle="collapse" data-target=".menu-wrapper">
         <span class="icon-bar"></span>
@@ -14,14 +17,15 @@
     <div class="menu-wrapper collapse navbar-collapse">
       <div class="navbar-right">
         <ul class="nav navbar-nav">
-          <li><%= link_to "Random"        , rate_photo_path %>            </li>
-
-          <%= render "layouts/sign_in_form" %>
-          <li><%= link_to "Create Account", sign_up_path %>               </li>
-
-          <li><%= link_to "My Account"    , show_user_path(:user_id)%>    </li>
-          <li><%= link_to "Sign Out"      , sign_out_path%>               </li>
+        <% if @current_user %>
+          <!-- <li> Hello, <%= @current_user.username %> </li> -->
+          <li><%= link_to "My Account"    , show_user_path(:user_id)%> </li>
+          <li><%= link_to "Sign Out"      , sign_out_path%>            </li>
         </ul>
+        <% else %>
+          <li><%= render "layouts/sign_in_form" %></li>
+          <button class="btn btn-success btn-md", id="create-acct-btn"><%= link_to "Create Account", sign_up_path %> </button>
+        <% end %>
       </div>
     </div>
   </div>
