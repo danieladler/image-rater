@@ -1,39 +1,42 @@
-<h1>DETAIL: <%= @photo.title %></h1>
+<div class="row">
+  <div id="photo-container">
+    <%= image_tag @photo.image_file.detail %>
+  </div>
 
-<%= image_tag @photo.image_file.detail %>
-
-<div id="photo-container">
-  <%= form_for @photo do |f| %>
-    <div class="field">
-      <%= f.label      :title %><br>
-      <%= f.text_field :title %>
-    </div>
-    <div class="field">
-      <%= f.label      :description %><br>
-      <%= f.text_field :description %>
-    </div>
-    <div class="field">
-      <%= f.label      :image_file %><br>
-      <%= f.file_field :image_file %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
-  ------
-  <p>
-    Photo by:
-    <% if @photo.user %>
-      <%= @photo.user.username %>
-    <% else %>
-      anonymous
+  <div id="photo-details-form">
+    <%= form_for @photo do |f| %>
+      <div class="field">
+        <%= f.label      :title %><br>
+        <%= f.text_field :title %>
+      </div>
+      <div class="field">
+        <%= f.label      :description %><br>
+        <%= f.text_field :description %>
+      </div>
+      <div class="field">
+        <%= f.label      :image_file %><br>
+        <%= f.file_field :image_file %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
     <% end %>
-  </p>
-  <p> Gravatar image placeholder            </p>
-  ------
-  <p> Ratings summary placeholder           </p>
-  <p> comments placeholder                  </p>
+    ------
+    <p>
+      Photo by:
+      <% if @photo.user %>
+        <%= @photo.user.username %>
+      <% else %>
+        anonymous
+      <% end %>
+    </p>
+    <p> Gravatar image placeholder            </p>
+    ------
+    <p> Ratings summary placeholder           </p>
+    <p> comments placeholder                  </p>
+  </div>
 </div>
+
 
 <div class="row">
   <div class="col-sm-3 delete-photo">
