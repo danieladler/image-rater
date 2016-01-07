@@ -19,12 +19,12 @@ class ImageFileUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [256, 256]
   end
 
-  version :square do
-    process :resize_to_fill => [256, 256]
-  end
-
   version :index do
     process :resize_to_fill => [555, 367, gravity = "center"]
+  end
+
+  version :detail do
+    process :resize_to_fit => [944, 623]
   end
 
 end
