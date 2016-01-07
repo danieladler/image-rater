@@ -22,7 +22,17 @@
 </div>
 
 <div class="row">
-  <div class="col-sm-6">
-      <!-- display thumbnails of all user images here -->
+  <div class="col-lg-12 all-user-photos-previews">
+    <h2>My Images</h2>
+    <% @current_user.photos.sort.in_groups_of(4, false).each do |group| %>
+      <div class="row">
+        <% group.each do |p| %>
+          <div class="col-lg-3 preview-photo-block">
+            <%= link_to image_tag(p.image_file.preview), photo_path(p.id) %><br>
+            uploaded on: <%= p.created_at.strftime("%m/%d/%Y") %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
