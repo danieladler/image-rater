@@ -1,17 +1,21 @@
-<%= form_for @photo, url: add_photo_path do |f| %>
-  <div class="field">
-    <%= f.label      :title %><br>
-    <%= f.text_field :title %>
+<div class="row">
+  <div class="col-sm-12">
+      <%= form_for @photo, url: add_photo_path do |f| %>
+      <div class="form-group">
+        <%= f.label      :title %><br>
+        <%= f.text_field :title %>
+      </div>
+      <div class="form-group">
+        <%= f.label      :description %><br>
+        <%= f.text_field :description %>
+      </div>
+      <div class="form-group">
+        <%= f.label      :image_file %><br>
+        <%= f.file_field :image_file %>
+      </div>
+      <div>
+        <%= f.submit id: :submit_new_photo%>
+      </div>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label      :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label      :image_file %><br>
-    <%= f.file_field :image_file %>
-  </div>
-  <div class="actions">
-    <%= f.submit id: :submit_new_photo %>
-  </div>
-<% end %>
+</div>
