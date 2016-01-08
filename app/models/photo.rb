@@ -11,6 +11,11 @@ class Photo < ActiveRecord::Base
     self.order("RANDOM()").first
   end
 
+  def self.rate_random(id)
+    @all_others = Photo.where.not(user_id: id)
+    @all_others.random
+  end
+
   # instance method(s):
 
 end

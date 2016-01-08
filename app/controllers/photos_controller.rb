@@ -41,10 +41,6 @@ class PhotosController < ApplicationController
     redirect_to root_path
   end
 
-  def rate
-    @photo = Photo.random
-  end
-
   def rankings
   end
 

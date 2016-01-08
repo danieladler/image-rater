@@ -4,7 +4,7 @@
     <div class="navbar-header">
       <ul class="nav navbar-nav">
         <li><%= link_to "Home", root_path, class:"navbar-brand" %></li>
-        <li><%= link_to "Random", rate_photo_path %></li>
+        <li><%= link_to "Random", photo_path(Photo.rate_random(@current_user.id)) %></li>
       </ul>
 
       <button class="navbar-toggle collapsed" data-toggle="collapse" data-target=".menu-wrapper">

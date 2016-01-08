@@ -9,5 +9,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def find_random_photo
+    # add code here in a later refactor
+  end
+
   before_action :set_current_user
 end

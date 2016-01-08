@@ -14,7 +14,6 @@ Rails.application.routes.draw do
 
 
   get    "/"                     , to: "photos#index"
-  get    "/photos/rate"          , to: "photos#rate"  , as: :rate_photo
   get    "/photos/new"           , to: "photos#new"   , as: :new_photo
   get    "/photos/:photo_id"     , to: "photos#show"  , as: :photo
   post   "/photos"               , to: "photos#add"   , as: :add_photo

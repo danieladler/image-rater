@@ -6,4 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :photos
   has_many :ratings, through: :photos
+
+  # add random_photo method
+
 end
