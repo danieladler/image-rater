@@ -31,6 +31,10 @@ body {
   font-size: 14px;
 }
 
+.navbar li a#greeting:hover {
+  color: #777;
+}
+
 // index
 .all-photos {
   margin-top: 40px;
@@ -44,18 +48,18 @@ body {
   border-radius: 6px;
 }
 
-#index-details-left {
+.index-details-left {
   float: left;
   font-size: 18px;
   font-weight: bold;
 }
 
-#index-details-right {
+.index-details-right {
   float:right;
   font-size: 18px;
 }
 
-#index-username {
+.index-username {
   color: white;
   font-weight: bold;
 }

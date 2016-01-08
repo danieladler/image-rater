@@ -6,11 +6,11 @@
           <div class="col-lg-6 index-photo-block">
             <%= link_to image_tag(p.image_file.index), photo_path(p.id) %><br>
             <div class="col-log-6 index-photo-details">
-              <div id="index-details-left">
+              <div class="index-details-left">
                 <%= link_to p.title, photo_path(p.id) %>
               </div>
-              <div id="index-details-right">
-                <span>by</span> <span id="index-username"><%=link_to p.user.username, user_path(p.user.id)%></span>
+              <div class="index-details-right">
+                <span>by</span> <span class="index-username"><%=link_to p.user.username, user_path(p.user.id)%></span>
               </div>
             </div>
           </div>
