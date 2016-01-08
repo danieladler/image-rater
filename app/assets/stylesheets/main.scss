@@ -71,8 +71,20 @@ body {
 
 // photo 'show' page
 
-#photo-container {
+.photo-container {
   margin: 40px 0;
+}
+
+.photo-image-container {
+  padding-left: 0;
+}
+
+.photo-image-container img {
+  border-radius: 4px;
+}
+
+.photo-details-container {
+  padding-left: 0 0;
 }
 
 // user account page

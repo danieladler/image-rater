@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="edit-photo-container col-lg-12">
+    <h2>Edit Photo</h2>
+    <%= form_for @photo do |f| %>
+      <div class="field">
+        <%= f.label      :title %>
+        <%= f.text_field :title %>
+      </div>
+      <div class="field">
+        <%= f.label      :description %>
+        <%= f.text_field :description %>
+      </div>
+      <div class="field">
+        <%= f.label      :image_file %>
+        <%= f.file_field :image_file %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
+    <form action="/photos/<%=@photo.id%>" method="POST">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" class="btn btn-md btn-danger delete-photo-btn" value="Delete" data-confirm:"Are you sure?">
+    </form>
+  </div>
+</div>
