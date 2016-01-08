@@ -72,19 +72,44 @@ body {
 // photo 'show' page
 
 .photo-container {
-  margin: 40px 0;
+  margin: 20px 0 0 0;
 }
 
 .photo-image-container {
   padding-left: 0;
 }
 
-.photo-image-container img {
+.photo-detail-version img {
   border-radius: 4px;
 }
 
 .photo-details-container {
   padding-left: 0 0;
+}
+
+.details-top {
+  padding-bottom: 20px;
+}
+
+.details-ratings {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.details-comments {
+  padding-top: 20px;
+}
+
+#photo-title {
+  padding-top: 10px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+#photo-description {
+  font-size: 16px;
 }
 
 // user account page

@@ -1,24 +1,31 @@
 <div class="row">
   <div class="photo-container col-lg-12">
     <div class="photo-image-container col-lg-9">
-      <%= image_tag @photo.image_file.detail %>
-      <span id="photo-title"><%= @photo.title %></span>
-      <span id="photo-description"><%= @photo.description %></span>
+      <div class="photo-detail-version">
+        <%= image_tag @photo.image_file.detail %>
+      </div>
+      <p id="photo-title"><%= @photo.title %></p>
+      <p id="photo-description"><%= @photo.description %></p>
     </div>
 
     <div class="photo-details-container col-lg-3">
-      <p>
-        Photo by:
-        <% if @photo.user %>
-          <%= @photo.user.username %>
-        <% else %>
-          anonymous
-        <% end %>
-      </p>
-      <p> Gravatar image placeholder            </p>
-      ------
-      <p> Ratings summary placeholder           </p>
-      <p> comments placeholder                  </p>
+      <div class="details-top">
+        <span class="gravatar-img">  </span>
+        <span>By
+          <% if @photo.user %>
+            <span id="detail-username"><%= link_to @photo.user.username, user_path(@photo.user.id) %></span>
+          <% else %>
+            anonymous
+          <% end %>
+          <br>
+        </span>
+      </div>
+      <div class="details-ratings">
+        <p> Ratings summary placeholder           </p>
+      </div>
+      <div class="details-comments">
+        <p> comments placeholder                  </p>
+      </div>
     </div>
   </div>
 </div>
