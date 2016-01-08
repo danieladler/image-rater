@@ -8,10 +8,15 @@ class ApplicationController < ActionController::Base
       @current_user = User.find(session[:user_id])
     end
   end
-
-  def find_random_photo
-    # add code here in a later refactor
-  end
-
   before_action :set_current_user
+
+  def random_photo
+    if @current_user
+      all_others = Photo.where.not(user_id: @current_user.id).random.id
+    elsif @current_user == nil
+      photo = Photo.order("RANDOM()").first.id
+    end
+  end
+  helper_method :random_photo
+
 end

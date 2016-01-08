@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   post "/sign-in"                , to: "sessions#sign_in" , as: :sign_in
   get  "/sign-out"               , to: "sessions#sign_out", as: :sign_out
 
-
   get    "/"                     , to: "photos#index"
   get    "/photos/new"           , to: "photos#new"   , as: :new_photo
   get    "/photos/:photo_id"     , to: "photos#show"  , as: :photo
