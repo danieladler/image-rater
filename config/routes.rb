@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get  "/sign-up"                , to: "users#sign_up", as: :sign_up
   post "/users/:user_id"         , to: "users#update" , as: :update_user
   post "/users"                  , to: "users#create" , as: :new_user
-  get  "/users/:user_id/account" , to: "users#show"   , as: :user
+  get  "/users/:user_id"         , to: "users#show"   , as: :user
 
   # put mailer routes here if they are to occur separately from
   # existing actions (like creating a new user)

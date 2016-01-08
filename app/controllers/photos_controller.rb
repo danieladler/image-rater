@@ -23,6 +23,7 @@ class PhotosController < ApplicationController
 
   def add
     @photo             = Photo.new
+    @photo.user_id     = @current_user.id
     @photo.title       = params[:photo][:title]
     @photo.description = params[:photo][:description]
     @photo.image_file  = params[:photo][:image_file]

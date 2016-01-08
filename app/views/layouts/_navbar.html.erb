@@ -19,7 +19,7 @@
         <ul class="nav navbar-nav">
         <% if @current_user %>
           <!-- <li> Hello, <%= @current_user.username %> </li> -->
-          <li><%= link_to "My Account"    , user_path(:user_id)%> </li>
+          <li><%= link_to "My Account"    , user_path(@current_user.id)%> </li>
           <li><%= link_to "Sign Out"      , sign_out_path%>            </li>
         </ul>
         <% else %>

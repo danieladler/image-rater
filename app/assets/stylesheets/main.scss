@@ -44,8 +44,20 @@ body {
   border-radius: 6px;
 }
 
+#index-details-left {
+  float: left;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#index-details-right {
+  float:right;
+  font-size: 18px;
+}
+
 #index-username {
-  float: right;
+  color: white;
+  font-weight: bold;
 }
 
 .add-photo-container {
