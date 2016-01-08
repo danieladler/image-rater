@@ -5,7 +5,8 @@ class PhotosController < ApplicationController
   end
 
   def show
-    @photo = Photo.find(params[:photo_id])
+    @photo  = Photo.find(params[:photo_id])
+    # @rating = Rating.new
   end
 
   def update

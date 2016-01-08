@@ -1,5 +1,7 @@
-<% if @current_user.id == @user.id %>
-  <%= render "layouts/account_details" %>
+<% if @current_user %>
+  <% if @current_user.id == @user.id %>
+    <%= render "layouts/account_details" %>
+  <% end %>
 <% end %>
 
 <div class="row">

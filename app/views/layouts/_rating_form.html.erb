@@ -1,0 +1,12 @@
+<form class="new_rating" action="/photos/<%= @photo.id %>/rate" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+  <div class="form-group">
+    <input type="text" name="rating[rating]" placeholder="Rate this photo">
+  </div>
+  <div class="form-group">
+    <input type="textarea" name="rating[comment]" placeholder="Comment (optional)">
+  </div>
+  <div class="actions">
+    <input type="submit" value="Submit Rating" class="btn btn-md btn-info">
+  </div>
+</form>

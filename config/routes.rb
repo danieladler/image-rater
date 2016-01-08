@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   delete "/photos/:photo_id"     , to: "photos#delete", as: :delete_photo
 
   # ratings routes to go here
-
+  post "/photos/:photo_id/rate"      , to: "ratings#create" , as: :rating
 
 
   # The priority is based upon order of creation: first created -> highest priority.

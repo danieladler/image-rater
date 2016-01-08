@@ -91,15 +91,19 @@ body {
   padding-bottom: 20px;
 }
 
-.details-ratings {
+.details-rating {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.details-comments {
+.details-comment {
   padding-top: 20px;
+}
+
+.comment-list li {
+  list-style-type: none;
 }
 
 #photo-title {
