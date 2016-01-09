@@ -33,7 +33,7 @@
           <h3>Comments</h3>
           <% if @photo.ratings.count > 0 == true %>
             <% @photo.ratings.each do |r| %>
-              <p> <%= r.comment  %> </p>
+              <p> <strong><%= link_to r.username, user_path(r.user.id) %></strong>: <%= r.comment  %> </p>
             <% end %>
           <% else %>
             <h4>Nobody has commented on this photo yet!</h4>

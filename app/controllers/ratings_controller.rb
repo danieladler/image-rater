@@ -5,6 +5,7 @@ class RatingsController < ApplicationController
     @rating.rating   = params[:rating][:rating]
     @rating.comment  = params[:rating][:comment]
     @rating.photo_id = params[:photo_id]
+    @rating.user_id  = @current_user.id
     if @rating.save
       redirect_to photo_path(@rating.photo_id)
     else

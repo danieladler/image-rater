@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness:true
 
   has_many :photos
-  has_many :ratings, through: :photos
+  has_many :ratings
 
   # add random_photo method
 
