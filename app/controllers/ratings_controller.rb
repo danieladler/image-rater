@@ -2,8 +2,9 @@ class RatingsController < ApplicationController
 
   def create
     @rating = Rating.new
-    @rating.rating   = params[:rating][:rating]
-    @rating.comment  = params[:rating][:comment]
+    # raise
+    @rating.comment  = params[:comment]
+    @rating.rating   = params[:rating]
     @rating.photo_id = params[:photo_id]
     @rating.user_id  = @current_user.id
     if @rating.save
