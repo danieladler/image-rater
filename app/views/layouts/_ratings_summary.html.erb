@@ -1,0 +1,4 @@
+<h3>Ratings Summary:</h3>
+Bad: <%= @photo.ratings.where(rating:1).count %>
+Meh: <%= @photo.ratings.where(rating:2).count %>
+Good: <%= @photo.ratings.where(rating:3).count %>
