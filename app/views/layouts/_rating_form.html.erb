@@ -6,7 +6,7 @@
   <%= radio_button_tag(:rating, "good") %>
   <%= label_tag(:rating_bad, "Good  ") %>
 
-  <%= text_area_tag(:comment) %>
+  <%= text_area_tag :comment, nil, :placeholder=>"comment (optional)" %>
 
   <%= submit_tag("submit") %>
 <% end %>
