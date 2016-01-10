@@ -9,4 +9,17 @@
   <%= text_area_tag :comment, nil, :placeholder=>"comment (optional)" %>
 
   <%= submit_tag("submit") %>
+
+  <% if @rating %>
+    <% if @rating.errors.any? %>
+      <% @rating.errors.each do |column, message| %>
+        <ul>
+          <li>
+            <strong><%= column.capitalize %>:</strong> <%= message %>
+          </li>
+        </ul>
+      <% end %>
+    <% end %>
+  <% end %>
+
 <% end %>

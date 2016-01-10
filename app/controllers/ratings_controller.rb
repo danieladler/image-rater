@@ -15,8 +15,8 @@ class RatingsController < ApplicationController
     if @rating.save
       redirect_to photo_path(@rating.photo_id)
     else
-      @photos = Photo.all
-      render :photos
+      @photo = Photo.find(params[:photo_id])
+      render "/photos/show"
     end
   end
 end

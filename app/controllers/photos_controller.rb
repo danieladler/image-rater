@@ -6,7 +6,6 @@ class PhotosController < ApplicationController
 
   def show
     @photo  = Photo.find(params[:photo_id])
-    # @rating = Rating.new
   end
 
   def update
@@ -31,8 +30,12 @@ class PhotosController < ApplicationController
     if @photo.save
       redirect_to photo_path(@photo.id)
     else
-      @photos = Photo.all
-      render :photos
+      render :new
+      # @photos = Photo.all
+      # render :photos
+
+      # @photo = Photo.find(params[:photo_id])
+      # render "/photos/show"
     end
   end
 

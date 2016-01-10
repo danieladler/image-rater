@@ -1,4 +1,7 @@
 class Photo < ActiveRecord::Base
+  validates :title, presence: true
+  validates :image_file, presence: true
+
   belongs_to :user
   has_many   :ratings
 
