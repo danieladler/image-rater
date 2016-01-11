@@ -6,6 +6,9 @@
         <strong>username:</strong> <%= @current_user.username %>
       </li>
       <li>
+        <strong>avatar:</strong> <%= image_tag avatar_url(@current_user) %>
+      </li>
+      <li>
         <strong>e-mail address:</strong> <%= @current_user.email %>
         <!-- <button class="btn btn-sm btn-info">Update</button> -->
       </li>

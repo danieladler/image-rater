@@ -16,14 +16,23 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:user_id])
+    @user = User.find(session[:user_id])
   end
 
   def update
     @user       = User.find(session[:user_id])
     @user.email = params[:email]
-    @user.save
-    redirect_to user_path(:user_id)
+    if @user.save
+      redirect_to user_path(:user_id)
+    else
+      render :sign_up
+    end
   end
+
+  def avatar_url(user)
+    gravatar_id = Digest::MD5.hexdigest(user.email.downcase)
+    "http://gravatar.com/avatar/#{gravatar_id}.png"
+  end
+  helper_method :avatar_url
 
 end
