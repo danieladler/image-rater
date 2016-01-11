@@ -75,11 +75,15 @@ body {
   margin: 20px 0 0 0;
 }
 
+.photo-container h3 {
+  margin-top: 0;
+}
+
 .photo-image-container {
   padding-left: 0;
 }
 
-.photo-detail-version img {
+#photo-detail-version {
   border-radius: 4px;
 }
 
@@ -97,7 +101,6 @@ body {
 }
 
 .details-rating-form {
-  border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   padding-top: 20px;
   padding-bottom: 20px;

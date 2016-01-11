@@ -15,5 +15,7 @@ class Photo < ActiveRecord::Base
   end
 
   # instance method(s):
+  def rated_by_current_user
+  end
 
 end
