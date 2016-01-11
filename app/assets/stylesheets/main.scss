@@ -35,6 +35,28 @@ body {
   color: #777;
 }
 
+.navbar #greeting {
+  padding-left: 0;
+}
+
+.avatar {
+  border-radius: 60px;
+}
+
+#avatar-link-centerer {
+  padding-left: 5px;
+  padding-right: 0;
+  width: 50px;
+}
+
+.avatar-header {
+  width: 80%;
+  height: 80%;
+  float: left;
+  position: relative;
+  bottom: 7px;
+}
+
 // index
 .all-photos {
   margin-top: 40px;
