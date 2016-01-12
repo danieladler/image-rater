@@ -12,16 +12,16 @@ class ApplicationController < ActionController::Base
 
   def random_photo
     if @current_user
-      # all photos not belonging to current user
       not_by_user = Photo.where.not(user_id: @current_user.id)
+      can_be_rated = []
       can_be_rated = not_by_user.select do |p|
-        # an array of photos not rated by current user
-        # iterate through each one where p == photo
-        p.ratings.count(:user_id == @current_user.id) == 0
+        p.ratings.where(user_id: @current_user.id).empty?
+          # alternate syntax:
+          # !p.ratings.exists?(user_id: @current_user.id)
       end
 
       if can_be_rated.empty? == true
-        # how do I get out of an infinite redirect loop when this is true?
+        return nil
         redirect_to root_path, notice: "You have reviewed every photo!"
       else
         can_be_rated.sample.id

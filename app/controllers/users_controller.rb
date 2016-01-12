@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params.require(:user).permit(:username, :email, :password, :password_confirmation))
+    @user = User.new(params.require(:user).permit(:username, :email, :password, :password_confirmation, :accept_rating_email))
     if @user.save
       session[:user_id] = @user.id
       UserMailer.subscribe(@user.id).deliver_now
@@ -20,12 +20,13 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user       = User.find(session[:user_id])
-    @user.email = params[:email]
+    @user                     = User.find(params[:user_id])
+    @user.accept_rating_email = params[:receive]
+    @user.email = params[:email] if params[:email]
     if @user.save
-      redirect_to user_path(:user_id)
+      redirect_to user_path(@user.id)
     else
-      render :sign_up
+      render "users/show"
     end
   end
 

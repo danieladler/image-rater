@@ -4,7 +4,11 @@
     <div class="navbar-header">
       <ul class="nav navbar-nav">
         <li><%= link_to "Home", root_path, class:"navbar-brand" %></li>
-        <li><%= link_to "Random", photo_path(random_photo) %></li>
+        <% if random_photo %>
+          <li><%= link_to "Random", photo_path(random_photo) %></li>
+        <% else %>
+          <li><a>NOPE</a></li>
+        <% end %>
       </ul>
 
       <button class="navbar-toggle collapsed" data-toggle="collapse" data-target=".menu-wrapper">
