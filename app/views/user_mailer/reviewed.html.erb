@@ -1,4 +1,4 @@
-<h1>Your photo #title was reviewed by <%= @reviewer.username %></h1>
+<h2>Your photo "<%= @photo.title %>" was reviewed by <%= @reviewer.username %></h2>
 
 <p>Hello, <%= @photographer.username %>! </p>
 
@@ -6,11 +6,11 @@
 
 <p>Rating on a scale of Bad to Good:
   <% if @rating.rating == 1 %>
-    Bad
+    <strong>Bad</strong>
   <% elsif @rating.rating == 2 %>
-    Meh
+    <strong>Meh</strong>
   <% elsif @rating.rating == 3%>
-    Good
+    <strong>Good</strong>
   <% end %>
 </p>
-<p>Comment: <%= @rating.comment %></p>
+<p>Comment: <em><%= @rating.comment %></em></p>
