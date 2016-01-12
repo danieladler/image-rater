@@ -1,0 +1,16 @@
+<h1>Your photo #title was reviewed by <%= @reviewer.username %></h1>
+
+<p>Hello, <%= @photographer.username %>! </p>
+
+<p>Here's what <%= @reviewer.username %> had to say about your photo:</p>
+
+<p>Rating on a scale of Bad to Good:
+  <% if @rating.rating == 1 %>
+    Bad
+  <% elsif @rating.rating == 2 %>
+    Meh
+  <% elsif @rating.rating == 3%>
+    Good
+  <% end %>
+</p>
+<p>Comment: <%= @rating.comment %></p>

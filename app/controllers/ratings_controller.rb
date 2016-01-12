@@ -13,6 +13,9 @@ class RatingsController < ApplicationController
     @rating.photo_id = params[:photo_id]
     @rating.user_id  = @current_user.id
     if @rating.save
+      @photo = Photo.find(params[:photo_id])
+      # first arg is photo owner, second arg is reviewer, third is the rating object itself
+      UserMailer.reviewed(@photo.user_id,@rating.user_id,@rating.id).deliver_now
       redirect_to photo_path(@rating.photo_id)
     else
       @photo = Photo.find(params[:photo_id])
