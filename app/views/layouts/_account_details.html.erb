@@ -12,12 +12,15 @@
         <strong>e-mail address:</strong> <%= @current_user.email %>
         <!-- <button class="btn btn-sm btn-info">Update</button> -->
       </li>
+    <li><strong>e-mail settings:</strong></li>
+      <ul class="user-email-settings">
+      <%= form_tag update_user_path do %>
+        <div class="form-group update-email-form col-lg-6">
+          <input type="email", name="email", placeholder="<%= @current_user.email%>", class="form-control">
+        </div>
+        <input type="submit", value="update e-mail", class="btn btn-md btn-primary">
+      <% end %>
+      </ul>
     </ul>
-    <%= form_tag update_user_path do %>
-      <div class="form-group update-email-form col-lg-6">
-        <input type="email", name="email", placeholder="<%= @current_user.email%>", class="form-control">
-      </div>
-      <input type="submit", value="update e-mail", class="btn btn-md btn-primary">
-    <% end %>
   </div>
 </div>
