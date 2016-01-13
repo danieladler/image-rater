@@ -23,4 +23,12 @@ class Photo < ActiveRecord::Base
     self.ratings.sum(:rating)
   end
 
+  def ratings_digest
+    if self.ratings
+       "Bad:  #{self.ratings.where(rating:1).count} ".to_s +
+       "Meh:  #{self.ratings.where(rating:2).count} ".to_s +
+       "Good: #{self.ratings.where(rating:3).count} ".to_s 
+    end
+  end
+
 end
