@@ -161,6 +161,63 @@ form.navbar-form {
   padding-top: 20px;
 }
 
+// signup page
+
+.signup-container {
+  padding-top: 20px;
+}
+
+.signup-input.signup-header {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #72befe;
+    text-align: center;
+    color: white;
+}
+
+.signup-input.signup-header h1 {
+  margin: 0 0;
+}
+
+.signup-form--no {
+    animation: NO 1s ease-in-out;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.signup-input {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    -webkit-appearance: none;
+    border: 0;
+    border-radius: 0px;
+    outline: 0;
+    transition: 0.3s;
+
+    &:focus {
+        background: darken(#fff, 3%);
+    }
+}
+
+.create-acct-btn {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    -webkit-appearance: none;
+    outline: 0;
+    border: 0;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    color: white;
+    transition: 0.3s;
+
+    &:hover {
+        // background: darken($color-primary, 5%);
+    }
+}
+
+
 // user account page
 
 .user-account-container {

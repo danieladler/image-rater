@@ -1,22 +1,24 @@
 <div class="row">
-  <div class = "signup-container col-lg-6 col-xs-10">
+  <div class = "signup-container col-lg-6 col-lg-push-3 col-xs-10">
     <form action="/users" method="POST" class="signup-form">
-      <h1>Sign Up</h1>
       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
-      <div class="form-group username-group">
-        <input type='text' name="user[username]" class="form-control" placeholder="username">
+      <div class="signup-input signup-header">
+        <h1>Sign Up</h1>
       </div>
-      <div class="form-group email-group">
-        <input type='text' name="user[email]" class="form-control" placeholder="e-mail address">
+      <div class="username-group">
+        <input type='text' name="user[username]" class="form-control signup-input" placeholder="username">
       </div>
-      <div class="form-group pw-group">
-        <input type="password" name="user[password]"  class="form-control" placeholder="Password">
+      <div class="email-group">
+        <input type='text' name="user[email]" class="form-control signup-input" placeholder="e-mail address">
       </div>
-      <div class="form-group pw-confirm-group">
-        <input type="password" name="user[password_confirmation]" class="form-control" placeholder="Confirm password">
+      <div class="pw-group">
+        <input type="password" name="user[password]"  class="form-control signup-input" placeholder="Password">
+      </div>
+      <div class="pw-confirm-group">
+        <input type="password" name="user[password_confirmation]" class="form-control signup-input" placeholder="Confirm password">
       </div>
 
-      <button type='submit' class="btn btn-primary btn-block" >Create Account</button>
+      <button type='submit' class="btn btn-primary create-acct-btn" >Create Account</button>
     </form>
   </div>
 </div>
