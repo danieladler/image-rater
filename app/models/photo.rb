@@ -15,7 +15,12 @@ class Photo < ActiveRecord::Base
   end
 
   # instance method(s):
-  def rated_by_current_user
+  def rating_score
+    # self.ratings.to_a.sum do |r|
+    #   r.rating
+    # end
+
+    self.ratings.sum(:rating)
   end
 
 end

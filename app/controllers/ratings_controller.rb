@@ -27,4 +27,9 @@ class RatingsController < ApplicationController
       render "/photos/show"
     end
   end
+
+  def ranked
+
+  end
+
 end

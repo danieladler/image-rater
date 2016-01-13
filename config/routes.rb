@@ -1,4 +1,4 @@
-Rails.application.routes.draw do 
+Rails.application.routes.draw do
   root to: "photos#index"
 
   get  "/sign-up"                , to: "users#sign_up", as: :sign_up
@@ -13,14 +13,15 @@ Rails.application.routes.draw do
   get  "/sign-out"               , to: "sessions#sign_out", as: :sign_out
 
   get    "/"                     , to: "photos#index"
-  get    "/photos/new"           , to: "photos#new"   , as: :new_photo
-  get    "/photos/:photo_id"     , to: "photos#show"  , as: :photo
-  post   "/photos"               , to: "photos#add"   , as: :add_photo
-  patch  "/photos/:photo_id"     , to: "photos#update", as: :update_photo
-  delete "/photos/:photo_id"     , to: "photos#delete", as: :delete_photo
+  get    "/photos/new"           , to: "photos#new"    , as: :new_photo
+  get    "/photos/ranked"        , to: "photos#ranked" , as: :ranked
+  get    "/photos/:photo_id"     , to: "photos#show"   , as: :photo
+  post   "/photos"               , to: "photos#add"    , as: :add_photo
+  patch  "/photos/:photo_id"     , to: "photos#update" , as: :update_photo
+  delete "/photos/:photo_id"     , to: "photos#delete" , as: :delete_photo
 
   # ratings routes to go here
-  post "/photos/:photo_id/rate"      , to: "ratings#create" , as: :rating
+  post "/photos/:photo_id/rate"  , to: "ratings#create"   , as: :rating
 
 
   # The priority is based upon order of creation: first created -> highest priority.

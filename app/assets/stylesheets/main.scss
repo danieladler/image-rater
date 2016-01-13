@@ -23,8 +23,13 @@ body {
   color: rgb(210, 138, 41);
 }
 
+form.navbar-form {
+  padding-right: 8px;
+}
+
 #create-acct-btn {
   margin-top: 8px;
+  margin-right: 16px;
 }
 
 #create-acct-btn a {
@@ -168,5 +173,14 @@ body {
 }
 
 .preview-photo-block img {
+  border-radius: 4px;
+}
+
+// photo ranking page
+.all-photos-ranked {
+  padding-top: 40px;
+}
+
+.all-photos-ranked img {
   border-radius: 4px;
 }

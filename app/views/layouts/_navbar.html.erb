@@ -4,6 +4,7 @@
     <div class="navbar-header">
       <ul class="nav navbar-nav">
         <li><%= link_to "Home", root_path, class:"navbar-brand" %></li>
+        <li><%= link_to "Rankings", ranked_path %></li>
         <% if random_photo %>
           <li><%= link_to "Random", photo_path(random_photo) %></li>
         <% else %>

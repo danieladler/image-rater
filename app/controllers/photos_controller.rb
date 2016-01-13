@@ -45,7 +45,10 @@ class PhotosController < ApplicationController
     redirect_to root_path
   end
 
-  def rankings
+  def ranked
+    @photos = Photo.all
+    # raise
+    @sorted = @photos.sort_by {|p| p.rating_score}
   end
 
   private
