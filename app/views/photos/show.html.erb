@@ -8,7 +8,7 @@
 
     <div class="photo-details-container col-lg-3">
       <div class="details-top">
-        <span><%= image_tag @photo.user.avatar, :class=>"avatar avatar-img-show" %></span>
+        <%= link_to (image_tag @photo.user.avatar, :class=>"avatar avatar-img-show"), user_path(@photo.user.id) %>
         <span>By
           <% if @photo.user %>
             <span id="detail-username"><%= link_to @photo.user.username, user_path(@photo.user.id) %></span>

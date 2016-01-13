@@ -1,12 +1,12 @@
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col-sm-12 user-account-container">
     <h2>Account details for: <strong><%= @current_user.username %></strong></h2>
     <ul class="user-account-details">
       <li>
         <strong>username:</strong> <%= @current_user.username %>
       </li>
       <li>
-        <strong>avatar:</strong> <%= image_tag @current_user.avatar, :class=>"avatar"%>
+        <strong>avatar:</strong> <%= image_tag @current_user.avatar, :class=>"avatar avatar-img-show"%>
       </li>
       <li>
         <strong>e-mail address:</strong> <%= @current_user.email %>

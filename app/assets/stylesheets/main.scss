@@ -163,9 +163,23 @@ form.navbar-form {
 
 // user account page
 
+.user-account-container {
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+
 .user-account-details li {
   list-style-type: none;
   padding-bottom: 10px;
+}
+
+#user-avatar-title {
+  padding-top: 20px;
+}
+
+#user-avatar-title h2 {
+  display: inline;
+  padding-left: 2px;
 }
 
 .preview-photo-block {
