@@ -5,10 +5,10 @@
       <div class="row">
         <% group.each do |p| %>
           <div class="col-lg-3 ranked-photo-block">
-            <%= link_to image_tag(p.image_file.preview), photo_path(p.id) %><br>
-            <div class="rating-info-block">
               <span class="rating-score"> <%= p.rating_score %></span>
+            <div class="rating-info-block">
             </div>
+            <%= link_to image_tag(p.image_file.preview), photo_path(p.id) %><br>
           </div>
         <% end %>
       </div>

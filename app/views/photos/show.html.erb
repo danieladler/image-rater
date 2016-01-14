@@ -18,10 +18,7 @@
           <br>
         </span>
       </div>
-      <div class="details-ratings-summary">
-      </div>
       <div class="details-rating-form">
-        <%= @photo.ratings_digest %>
         <% if @current_user == nil%>
             <h5>You must be logged in to rate photos.</h5>
         <% elsif @current_user %>
@@ -36,9 +33,13 @@
         <div class="comment-list">
           <h3>Comments</h3>
           <% if @photo.ratings.count > 0 == true %>
-            <% @photo.ratings.each do |r| %>
+            <% @photo.ratings.reverse.each do |r| %>
               <% if r.comment != "" %>
-                <p><strong><%= link_to r.username, user_path(r.user.id) %></strong>: <%= r.comment %></p>
+                <p>
+                  <strong><%= link_to r.username, user_path(r.user.id) %></strong>:
+                  <%= r.comment %>
+                  <span class="comment-time"><%= r.created_at.strftime("%b %e '%y")%></span>
+                </p>
               <% end %>
             <% end %>
           <% else %>

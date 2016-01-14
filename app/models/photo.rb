@@ -32,4 +32,15 @@ class Photo < ActiveRecord::Base
     end
   end
 
+  def bad_ratings_count
+    self.ratings.where(rating:1).count
+  end
+
+  def meh_ratings_count
+    self.ratings.where(rating:2).count
+  end
+
+  def good_ratings_count
+    self.ratings.where(rating:3).count
+  end
 end

@@ -126,12 +126,8 @@ form.navbar-form {
   width: 80px;
 }
 
-.details-ratings-summary {
-  border-bottom: 1px solid gray;
-  padding-bottom: 20px;
-}
-
 .details-rating-form {
+  border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -143,6 +139,7 @@ div.btn-group {
 
 .btn-group label {
   width: 33.33333339%;
+  font-size: 16px;
 }
 
 label.btn.btn-danger {
@@ -157,6 +154,7 @@ label.btn.btn-success {
   display: block;
   width: 100%;
   max-width: 100%;
+  font-size: 16px;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
   border: 0;
@@ -173,23 +171,17 @@ label.btn.btn-success {
   font-size: 16px;
 }
 
-// display: block;
-// width: 100%;
-// padding: 20px;
-// -webkit-appearance: none;
-// outline: 0;
-// border: 0;
-// border-top-right-radius: 0px;
-// border-top-left-radius: 0px;
-// color: white;
-// transition: 0.3s;
-
 .details-comment-list {
   padding-top: 20px;
 }
 
 .comment-list li {
   list-style-type: none;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: gray;
 }
 
 #photo-title {
@@ -311,13 +303,16 @@ label.btn.btn-success {
   border-radius: 4px;
 }
 
-.rating-score {
-  font-size: 26px;
-  color: rgb(73, 112, 200);
+.ranked-photo-block {
+  padding-bottom: 20px;
 }
 
-.rating-info-block {
-  text-align: center;
-  font-size: 18px;
-  padding-bottom: 20px;
+.rating-score {
+  font-size: 46px;
+  font-weight: bold;
+  color: white;
+  padding-right: 12px;
+  float: right;
+  top:60px;
+  position: relative;
 }
