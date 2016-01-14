@@ -1,24 +1,29 @@
-<%= form_tag("/photos/#{@photo.id}/rate", method:"post" ) do %>
-  <%= radio_button_tag(:rating, "bad") %>
-  <%= label_tag(:rating_bad, "Bad") %>
-  <%= radio_button_tag(:rating, "meh") %>
-  <%= label_tag(:rating_bad, "Meh") %>
-  <%= radio_button_tag(:rating, "good") %>
-  <%= label_tag(:rating_bad, "Good  ") %>
+<form action="/photos/<%= @photo.id%>/rate" method="post">
+  <input name="utf8" type="hidden" value="✓">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
+  <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-danger">
+      <input type="radio" name="rating" id="rating_bad" value="bad"> Bad
+    </label>
+    <label class="btn btn-warning">
+      <input type="radio" name="rating" id="rating_meh" value="meh"> Meh
+    </label>
+    <label class="btn btn-success">
+      <input type="radio" name="rating" id="rating_good" value="good"> Good
+    </label>
+  </div>
+  <textarea name="comment"id="review-comment-field" placeholder="comment(optional)"></textarea>
+  <button name="button" type="submit" class="btn btn-primary submit-review-btn">Submit</button>
+</form>
 
-  <%= text_area_tag :comment, nil, :placeholder=>"comment (optional)", :id=>"review-comment-field"%>
-
-  <%= button_tag("submit", :class=>"btn btn-primary submit-review-btn") %>
-
-  <% if @rating %>
-    <% if @rating.errors.any? %>
-      <% @rating.errors.each do |column, message| %>
-        <ul>
-          <li>
-            <strong><%= column.capitalize %>:</strong> <%= message %>
-          </li>
-        </ul>
-      <% end %>
+<% if @rating %>
+  <% if @rating.errors.any? %>
+    <% @rating.errors.each do |column, message| %>
+      <ul>
+        <li>
+          <strong><%= column.capitalize %>:</strong> <%= message %>
+        </li>
+      </ul>
     <% end %>
   <% end %>
 <% end %>

@@ -137,6 +137,22 @@ form.navbar-form {
   padding-bottom: 20px;
 }
 
+div.btn-group {
+  width: 100%;
+}
+
+.btn-group label {
+  width: 33.33333339%;
+}
+
+label.btn.btn-danger {
+  border-bottom-left-radius: 0px;
+}
+
+label.btn.btn-success {
+  border-bottom-right-radius: 0px;
+}
+
 #review-comment-field {
   display: block;
   width: 100%;
