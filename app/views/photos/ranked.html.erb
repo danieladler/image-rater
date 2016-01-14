@@ -1,3 +1,4 @@
+<h1>Rankings</h1>
 <div class="row">
   <div class="col-lg-12 all-photos-ranked">
     <% @sorted.reverse.in_groups_of(4, false).each do |group| %>
@@ -6,8 +7,7 @@
           <div class="col-lg-3 ranked-photo-block">
             <%= link_to image_tag(p.image_file.preview), photo_path(p.id) %><br>
             <div class="rating-info-block">
-              <span class="rating-score"> Total Rating Score: <%= p.rating_score %><br></span>
-              <span class="ratings-digest"><%= p.ratings_digest %></span>
+              <span class="rating-score"> <%= p.rating_score %></span>
             </div>
           </div>
         <% end %>

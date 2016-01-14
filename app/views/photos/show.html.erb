@@ -19,10 +19,9 @@
         </span>
       </div>
       <div class="details-ratings-summary">
-        <%= @photo.ratings_digest %>
       </div>
       <div class="details-rating-form">
-        <h3>Rate This Photo</h3>
+        <%= @photo.ratings_digest %>
         <% if @current_user == nil%>
             <h5>You must be logged in to rate photos.</h5>
         <% elsif @current_user %>

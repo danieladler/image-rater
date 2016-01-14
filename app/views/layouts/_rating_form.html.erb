@@ -6,9 +6,9 @@
   <%= radio_button_tag(:rating, "good") %>
   <%= label_tag(:rating_bad, "Good  ") %>
 
-  <%= text_area_tag :comment, nil, :placeholder=>"comment (optional)" %>
+  <%= text_area_tag :comment, nil, :placeholder=>"comment (optional)", :id=>"review-comment-field"%>
 
-  <%= submit_tag("submit") %>
+  <%= button_tag("submit", :class=>"btn btn-primary submit-review-btn") %>
 
   <% if @rating %>
     <% if @rating.errors.any? %>
