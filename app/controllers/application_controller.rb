@@ -28,7 +28,10 @@ class ApplicationController < ActionController::Base
       end
 
     elsif @current_user == nil
-      photo = Photo.order("RANDOM()").first.id
+      photo = Photo.order("RANDOM()").first
+      if photo
+        photo.id
+      end
     end
   end
   helper_method :random_photo
