@@ -11,7 +11,7 @@
         <%= link_to (image_tag @photo.user.avatar, :class=>"avatar avatar-img-show"), user_path(@photo.user.id) %>
         <span>By
           <% if @photo.user %>
-            <span id="detail-username"><%= link_to @photo.user.username, user_path(@photo.user.id) %></span>
+            <span class="username"><%= link_to @photo.user.username, user_path(@photo.user.id) %></span>
           <% else %>
             anonymous
           <% end %>

@@ -7,10 +7,10 @@
             <%= link_to image_tag(p.image_file.index, :class => "photo-index-version"), photo_path(p.id)%><br>
             <div class="col-log-6 index-photo-details">
               <div class="index-details-left">
-                <%= link_to p.title, photo_path(p.id) %>
+                <%= link_to p.title, photo_path(p.id), :class => "photo-name" %>
               </div>
               <div class="index-details-right">
-                <span>by</span> <span class="index-username"><%=link_to p.user.username, user_path(p.user.id)%></span>
+                <span>by</span> <span class="username"><%=link_to p.user.username, user_path(p.user.id)%></span>
               </div>
             </div>
           </div>
