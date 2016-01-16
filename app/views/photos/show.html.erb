@@ -36,7 +36,7 @@
             <% @photo.ratings.reverse.each do |r| %>
               <% if r.comment != "" %>
                 <p>
-                  <strong><%= link_to r.username, user_path(r.user.id) %></strong>:
+                  <span class="username"><%= link_to r.username, user_path(r.user.id)%></span>:
                   <%= r.comment %>
                   <span class="comment-time"><%= r.created_at.strftime("%b %e '%y")%></span>
                 </p>

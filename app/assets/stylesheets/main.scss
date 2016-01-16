@@ -1,17 +1,19 @@
 // site-wide
 
-@font-face{
-	// font-family: 'Print Dashed';
-	// src: url('PrintDashed.eot');
-	// src: url('PrintDashed.eot?iefix') format('eot'),
-	//      url('PrintDashed.woff') format('woff'),
-	//      url('PrintDashed.ttf') format('truetype'),
-	//      url('PrintDashed.svg#PrintDashed') format('svg');
+@font-face {
+  font-family: 'Croissant One';
+  src: font-url('CroissantOne-Regular.tff');
+}
+
+@font-face {
+  font-family: 'Cantarell';
+  src: font-url('Cantarell-Regular.tff'),
+               ('Cantarell-Bold.tff');
 }
 
 body {
   background-color: #FFFFFF;
-  font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family: "Cantarell","Helvetica Neue","Arial",sans-serif;
   font-size: 22px;
   margin-top: 50px;
 }
@@ -21,8 +23,8 @@ body {
   color: #BC38BC;
 }
 
-.username a:hover {
-  color: #BC38BC;
+span.username a:hover {
+  color: #E07A5F;
   text-decoration: none;
 }
 
@@ -30,26 +32,31 @@ body {
   color: #BC38BC;
 }
 
-
 // navbar
 
 .navbar-default {
-  // background-color: #5DA9E9;
   background-color: white;
+}
+
+ul.navbar-nav li a.navbar-brand {
+  font-weight: bold;
+  font-size: 28px;
+  font-family: "Croissant One";
+  color: #5DA9E9;
 }
 
 .navbar-nav li a:link, .navbar-nav li a:visited {
   color: rgb(96, 96, 96);
-  // color: white;
-  font-size: 22px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 ul.nav.navbar-nav li a:hover {
-  color: #f1b418;
+  color: #E07A5F;
 }
 
 .navbar .navbar-right li a:hover {
-  color: #f1b418;
+  color: #E07A5F;
 }
 
 form.navbar-form {
@@ -64,7 +71,6 @@ form.navbar-form {
 #create-acct-btn a {
   font-size: 14px;
 }
-
 
 .navbar #greeting {
   padding-left: 0;
@@ -109,6 +115,10 @@ form.navbar-form {
   border-radius: 6px;
 }
 
+img.photo-index-version:hover {
+  opacity: 0.8;
+}
+
 .index-details-left {
   float: left;
   font-size: 18px;
@@ -121,17 +131,21 @@ form.navbar-form {
 }
 
 a.photo-name {
-  color: rgb(96, 96, 96);
+  color: #F7567C;
 }
 
 a.photo-name:hover {
-  color: #f1b418;
+  color: #5DA9E9;
   text-decoration: none;
 }
 
 .add-photo-container {
   margin: 20px 0;
   padding-bottom: 60px;
+}
+
+.add-photo-btn a {
+  color: white;
 }
 
 // photo 'show' page
@@ -153,7 +167,6 @@ a.photo-name:hover {
 }
 
 .photo-details-container {
-  // padding-left: 0 0;
   padding-top: 20px;
 }
 
@@ -226,7 +239,6 @@ label.btn.btn-success {
 }
 
 #photo-title {
-  padding-top: 10px;
   font-size: 30px;
   font-weight: 600;
 }
@@ -239,6 +251,18 @@ label.btn.btn-success {
 
 .add-photo-form {
   padding-top: 20px;
+}
+
+.add-photo-form-header {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: #72befe;
+  text-align: center;
+  color: white;
+}
+
+.add-photo-form-header h1 {
+  margin-bottom: 0px;
 }
 
 // signup page
@@ -291,6 +315,8 @@ label.btn.btn-success {
     border-top-left-radius: 0px;
     color: white;
     transition: 0.3s;
+    font-size: 32px;
+    font-weight: bold;
 
     &:hover {
         // background: darken($color-primary, 5%);
@@ -335,6 +361,12 @@ label.btn.btn-success {
   border-radius: 4px;
 }
 
+.photo-upload {
+  font-size: 12px;
+  float: right;
+  padding-right: 6px;
+}
+
 // photo ranking page
 .all-photos-ranked {
   padding-top: 20px;
@@ -349,8 +381,9 @@ label.btn.btn-success {
 }
 
 .rating-score {
+  font-family: "Croissant One";
   font-size: 46px;
-  font-weight: bold;
+  // font-weight: bold;
   color: white;
   padding-right: 12px;
   float: right;
