@@ -64,12 +64,18 @@ form.navbar-form {
 }
 
 #create-acct-btn {
-  margin-top: 8px;
+  margin-top: 10px;
   margin-right: 16px;
 }
 
 #create-acct-btn a {
   font-size: 14px;
+  color: white;
+}
+
+#create-acct-btn a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .navbar #greeting {
@@ -369,7 +375,6 @@ label.btn.btn-success {
 
 // photo ranking page
 .all-photos-ranked {
-  padding-top: 20px;
 }
 
 .all-photos-ranked img {
@@ -377,7 +382,7 @@ label.btn.btn-success {
 }
 
 .ranked-photo-block {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .rating-score {
