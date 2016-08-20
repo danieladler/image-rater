@@ -321,6 +321,8 @@ a.photo-name:hover {
 
 #photo-detail-version {
   border-radius: 4px;
+  width: 100%;
+  margin: 5px;
 }
 
 .photo-details-container {
@@ -402,6 +404,11 @@ label.btn.btn-success {
 
 #photo-description {
   font-size: 16px;
+}
+
+#photo-title, #photo-description {
+  width: 100%;
+  margin: 4px 10px;
 }
 
 // add new photo page
