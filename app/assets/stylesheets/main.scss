@@ -42,6 +42,10 @@ span.username a:hover {
   margin-bottom: 0;
 }
 
+.navbar .container {
+  padding: 10px 0;
+}
+
 .navbar-default {
   background-color: white;
 }
@@ -57,14 +61,14 @@ span.username a:hover {
   color: #E07A5F;
 }
 
-.navbar-nav li a:link, .navbar-nav li a:visited {
+.navbar-nav li a:link, .navbar-nav li a:visited, .navbar-nav li a {
   color: rgb(96, 96, 96);
   font-weight: bold;
   font-size: 14px;
 }
 
-#navbar {
-  padding-bottom: 10px;
+#ratings-closed:hover {
+  color: #777;
 }
 
 ul.nav.navbar-nav li a:hover {
@@ -75,19 +79,26 @@ ul.nav.navbar-nav li a:hover {
   color: #E07A5F;
 }
 
+.navbar .navbar-right ul li {
+  list-style-type: none;
+  float: left;
+  clear: none;
+  margin: 10px 5px;
+}
+
+.logged-in-user {
+  float: right;
+  padding-right: 20px;
+  margin-bottom: 0;
+}
+
 .navbar-form {
-  // padding-right: 8px;
   display: inline-block;
   padding-right: 0;
 }
 
 .navbar-right .btn {
   width: 80px;
-}
-
-#create-acct-btn {
-  // margin-top: 10px;
-  // margin-right: 16px;
 }
 
 #create-acct-btn a {
@@ -110,16 +121,12 @@ ul.nav.navbar-nav li a:hover {
 
 .navbar li a#greeting:hover {
   color: rgb(96, 96, 96);
+  text-decoration: none;
 }
 
 .avatar {
   border-radius: 60px;
-}
-
-#avatar-link-centerer {
-  padding-left: 5px;
-  padding-right: 0;
-  width: 50px;
+  padding-left: 10px;
 }
 
 .avatar-header {
@@ -132,6 +139,11 @@ ul.nav.navbar-nav li a:hover {
 
 // media query to display nav elements correctly on mid-and-smaller screens
 @media (min-width: 769px) and (max-width: 991px) {
+  #navbar {
+    width: 100%;
+    margin: 2px;
+  }
+
   .navbar-header {
       float: none;
   }
@@ -175,6 +187,11 @@ ul.nav.navbar-nav li a:hover {
 }
 
 @media (max-width: 768px) {
+  #navbar {
+    width: 100%;
+    margin: 2px;
+  }
+
   .navbar-header {
       float: none;
   }
@@ -204,7 +221,7 @@ ul.nav.navbar-nav li a:hover {
   .navbar-nav>li {
       float: left;
       display: inline-block;
-      width: 48%;
+      width: 45%;
       text-align: center;
       margin: 4px;
   }
@@ -457,10 +474,6 @@ label.btn.btn-success {
     transition: 0.3s;
     font-size: 32px;
     font-weight: bold;
-
-    &:hover {
-        // background: darken($color-primary, 5%);
-    }
 }
 
 
@@ -522,7 +535,6 @@ label.btn.btn-success {
 .rating-score {
   font-family: "Croissant One";
   font-size: 46px;
-  // font-weight: bold;
   color: white;
   padding-right: 12px;
   float: right;
