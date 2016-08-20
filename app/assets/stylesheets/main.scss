@@ -117,12 +117,20 @@ form.navbar-form {
   margin-bottom: 40px;
 }
 
-.index-photo-block img {
-  border-radius: 6px;
+.photo-index-version {
+  clear: right;
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
 }
 
-img.photo-index-version:hover {
-  opacity: 0.8;
+.photo-index-version:hover {
+  opacity: 0.75;
+}
+
+.index-photo-details {
+  padding: 0 10px;
+  width: 100%;
 }
 
 .index-details-left {
