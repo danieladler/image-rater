@@ -47,7 +47,6 @@ class PhotosController < ApplicationController
 
   def ranked
     @photos = Photo.all
-    # raise
     @sorted = @photos.sort_by {|p| p.rating_score}
   end
 
