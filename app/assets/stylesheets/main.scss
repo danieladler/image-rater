@@ -131,7 +131,7 @@ ul.nav.navbar-nav li a:hover {
 }
 
 // media query to display nav elements correctly on mid-and-smaller screens
-@media (max-width: 991px) {
+@media (min-width: 769px) and (max-width: 991px) {
   .navbar-header {
       float: none;
   }
@@ -153,43 +153,80 @@ ul.nav.navbar-nav li a:hover {
       display: none!important;
   }
   .navbar-nav {
-      float: none!important;
       margin-top: 7.5px;
   }
   .navbar-nav>li {
       float: left;
       display: inline-block;
-      // clear: right;
-      // display: block;
-      // width: 46%;
-      text-align: center;
-      background-color: rgb(245, 245, 245);
-      border: 1px solid gray;
-      border-radius: 6px;
       margin: 4px;
   }
   .navbar-nav>li>a {
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding: 5px;
   }
   .collapse.in{
       display:block !important;
   }
-  .navbar-form-wrapper {
+  .navbar-form {
+    margin: 0;
+    padding: 0;
+    padding-left: 4px;
+    border: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+  .navbar-nav {
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: left;
+      display: inline-block;
+      width: 48%;
+      text-align: center;
+      margin: 4px;
+  }
+  .navbar-nav>li>a {
+      padding: 5px;
+  }
+  .navbar-form-wrapper .form-group {
+    display: block;
+    clear: right;
+    margin: 4px;
   }
   .navbar-form {
     margin: 0;
     padding: 0;
-    // width: 46%;
     padding-left: 4px;
     border: 0;
-    // clear: right;
-    // display: block;
+    width: 100%;
   }
-  #create-acct-btn {
-    // width: 46%;
-    // width: 100%;
-    // margin: 0 2px;
+  .navbar-form .btn, #create-acct-btn {
+    width: 99%;
+    margin-left: 2px;
+    padding: 5px;
   }
 }
 
