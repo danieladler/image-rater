@@ -1,25 +1,27 @@
 <div class="row">
-  <div class = "signup-container col-lg-6 col-lg-push-3 col-xs-10">
-    <form action="/users" method="POST" class="signup-form">
-      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
-      <div class="signup-input signup-header">
-        <h1>Sign Up</h1>
-      </div>
-      <div class="username-group">
-        <input type='text' name="user[username]" class="form-control signup-input" placeholder="username">
-      </div>
-      <div class="email-group">
-        <input type='text' name="user[email]" class="form-control signup-input" placeholder="e-mail address">
-      </div>
-      <div class="pw-group">
-        <input type="password" name="user[password]"  class="form-control signup-input" placeholder="Password">
-      </div>
-      <div class="pw-confirm-group">
-        <input type="password" name="user[password_confirmation]" class="form-control signup-input" placeholder="Confirm password">
-      </div>
+  <div class = "col-xs-12 col-sm-10 col-sm-push-3 col-md-push-4">
+    <div class="signup-container">
+      <form action="/users" method="POST" class="signup-form">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
+        <div class="signup-input signup-header">
+          <h1>Sign Up</h1>
+        </div>
+        <div class="username-group">
+          <input type='text' name="user[username]" class="form-control signup-input" placeholder="username">
+        </div>
+        <div class="email-group">
+          <input type='text' name="user[email]" class="form-control signup-input" placeholder="e-mail address">
+        </div>
+        <div class="pw-group">
+          <input type="password" name="user[password]"  class="form-control signup-input" placeholder="Password">
+        </div>
+        <div class="pw-confirm-group">
+          <input type="password" name="user[password_confirmation]" class="form-control signup-input" placeholder="Confirm password">
+        </div>
 
-      <button type='submit' class="btn btn-primary create-acct-btn" >Create Account</button>
-    </form>
+        <button type='submit' class="btn btn-primary create-acct-btn" >Create Account</button>
+      </form>
+    </div>
   </div>
 </div>
 

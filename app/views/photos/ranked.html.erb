@@ -5,7 +5,7 @@
         <% group.each do |p| %>
           <div class="col-xs-6 col-sm-3 ranked-photo-block ">
             <span class="rating-score"> <%= p.rating_score %></span>
-            <%= link_to image_tag(p.image_file.preview, :class => "photo-ranked-version"), photo_path(p.id) %>
+            <%= link_to image_tag(p.image_file.index, :class => "photo-ranked-version"), photo_path(p.id) %>
           </div>
         <% end %>
       </div>
