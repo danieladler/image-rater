@@ -1,11 +1,10 @@
-<div class="row">
-  <div class="col-lg-12 all-photos">
+<div class="all-photos">
+  <div class="row">
     <% @photos.shuffle.in_groups_of(2, false).each do |group| %>
-      <div class="row">
         <% group.each do |p| %>
-          <div class="col-lg-6 index-photo-block">
-            <%= link_to image_tag(p.image_file.index, :class => "photo-index-version"), photo_path(p.id)%><br>
-            <div class="col-log-6 index-photo-details">
+          <div class="col-sm-12 col-md-6 col-lg-4 index-photo-block">
+            <%= link_to image_tag(p.image_file.index, :class => "photo-index-version"), photo_path(p.id)%>
+            <div class="col-sm-12 col-lg-6 index-photo-details">
               <div class="index-details-left">
                 <%= link_to p.title, photo_path(p.id), :class => "photo-name" %>
               </div>
@@ -15,15 +14,16 @@
             </div>
           </div>
         <% end %>
-      </div>
-    <% end %>
+      <% end %>
   </div>
 </div>
 
-<div class="row">
-  <div class="add-photo-container">
-    <button class="btn btn-lg btn-info col-lg-6 col-lg-push-3 col-sm-6 col-sm-push-3 add-photo-btn">
-      <%= link_to "Add new photo", new_photo_path %>
-    </button>
+<div class="add-photo-container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-push-2 col-md-4 col-md-push-4 add-photo-btn-wrapper">
+      <button class="btn btn-lg btn-info add-photo-btn">
+        <%= link_to "Add new photo", new_photo_path %>
+      </button>
+    </div>
   </div>
 </div>

@@ -1,9 +1,12 @@
-<%= form_tag sign_in_path, class:"navbar-form" do %>
-  <div class="form-group">
-    <input type="username", name="username", placeholder="username", class="form-control">
-  </div>
-  <div class="form-group">
-    <input type="password", name="password", placeholder="password", class="form-control">
-  </div>
-  <input type="submit", value="Sign In", class="btn btn-md btn-primary">
-<% end %>
+<div class="navbar-form-wrapper">
+  <%= form_tag sign_in_path, class:'navbar-form' do %>
+    <div class="form-group">
+      <input type="username", name="username", placeholder="username", class="form-control">
+    </div>
+    <div class="form-group">
+      <input type="password", name="password", placeholder="password", class="form-control">
+    </div>
+    <input type="submit", value="Sign In", class="btn btn-md btn-primary">
+  <% end %>
+  <button class="btn btn-success btn-md", id="create-acct-btn"><%= link_to "Sign Up", sign_up_path %> </button>
+</div>
