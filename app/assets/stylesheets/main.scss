@@ -146,6 +146,10 @@ ul.nav.navbar-nav li a:hover {
     margin: 2px;
   }
 
+  .navbar-brand {
+    padding-left: 40px;
+  }
+
   .navbar-header {
       float: none;
   }
@@ -192,6 +196,10 @@ ul.nav.navbar-nav li a:hover {
   #navbar {
     width: 100%;
     margin: 2px;
+  }
+
+  .navbar .container {
+    padding: 0px 20px;
   }
 
   .navbar-header {
@@ -434,7 +442,8 @@ label.btn.btn-success {
 // signup page
 
 .signup-container {
-  padding-top: 20px;
+  padding: 20px;
+  max-width: 400px;
 }
 
 .signup-input.signup-header {
@@ -516,11 +525,12 @@ label.btn.btn-success {
 }
 
 .preview-photo-block {
-  padding-top: 20px;
+  padding: 20px;
 }
 
-.preview-photo-block img {
+.photo-preview-version {
   border-radius: 4px;
+  width: 100%;
 }
 
 .photo-upload {
