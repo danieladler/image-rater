@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(params.require(:user).permit(:username, :email, :password, :password_confirmation, :accept_rating_email))
     if @user.save
       session[:user_id] = @user.id
-      UserMailer.subscribe(@user.id).deliver_now
+      # UserMailer.subscribe(@user.id).deliver_now
       redirect_to root_path, notice: "Registration Successful. Welcome to ImageRater!"
     else
       render :sign_up
